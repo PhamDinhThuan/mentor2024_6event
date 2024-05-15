@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>メンタープログラム</title>
+<style>
+  #countdown {
+    color: red;
+    font-weight:bold;
+  }
+  #alarmIcon{
+    width:50px;
+    height:50px;
+    background-image: url('images/countdown1.png');
+    background-image: url('images/countdown2.png');
+    background-size: cover;
+  }
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="ここにサイト説明を入れます">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="container">
+<header>
+<h1 id="logo"><a href="index.html"><img src="images/tottori_logo.png" alt="tottori_logo" class="swing"></a></h1>
+</header>
+<div id="contents">
+<!--メインメニュー-->
+<div id="menubar">
+<nav>
+<ul>
+<li><a href="home.html">ホーム</a></li>
+<li><a href="sekijum.html">席順</a></li>
+<li><a href="index.html">問題</a></li>
+</ul>
+</nav>
+</div>
+<!--/#menubar-->
+<main>
+<section>
+<!--
+<button id="startButton">アラームを開始する</button>
+<div id="countdown"></div>
+<script>
+var timer = null;
+
+document.getElementById('startButton').addEventListener('click', function() {
+  if (timer === null) {
+    var minutes = 4; // アラームの分数を設定
+    var seconds = 0; // アラームの秒数を設定
+
+    // カウントダウン用の関数
+    function countdown() {
+      if (seconds === 0) {
+        if (minutes === 0) {
+          // 指定された時間が過ぎている場合はアラームを鳴らす
+          alert("アラームです！");
+          clearInterval(timer);
+          timer = null;
+          document.getElementById("startButton").textContent = "アラームを開始する";
+          return;
+        }
+        minutes--;
+        seconds = 59;
+      } else {
+        seconds--;
+      }
+
+      var displayMinutes = minutes < 10 ? '0' + minutes : minutes;
+      var displaySeconds = seconds < 10 ? '0' + seconds : seconds;
+
+      document.getElementById("countdown").innerHTML = displayMinutes + "分 " + displaySeconds + "秒 ";
+    }
+
+    countdown(); // 初期表示のために一度呼び出す
+    timer = setInterval(countdown, 1000); // 1秒ごとに更新
+    this.textContent = "アラームを停止する";
+  } else {
+    clearInterval(timer);
+    timer = null;
+    document.getElementById("countdown").innerHTML = "";
+    this.textContent = "アラームを開始する";
+  }
+});
+</script>  -->
+<!---->
+<div id="startButton"> 
+  <img src="images/countdown1.png" id="alarmIcon" alt="アラームオフ">
+</div>
+<div id="countdown"></div>
+<script>
+var timer = null;
+var alarmIcon = document.getElementById("alarmIcon");
+
+document.getElementById('startButton').addEventListener('click', function() {
+  if (timer === null) {
+    var minutes = 4; // アラームの分数を設定
+    var seconds = 0; // アラームの秒数を設定
+
+    // カウントダウン用の関数
+    function countdown() {
+      if (seconds === 0) {
+        if (minutes === 0) {
+          // 指定された時間が過ぎている場合はアラームを鳴らす
+          alert("時間になりました！");
+          clearInterval(timer);
+          timer = null;
+          alarmIcon.src = "images/countdown2.png"; // アイコンをオフにする
+          document.getElementById("countdown").innerHTML = "";
+          return;
+        }
+        minutes--;
+        seconds = 59;
+      } else {
+        seconds--;
+      }
+
+      var displayMinutes = minutes < 10 ? '0' + minutes : minutes;
+      var displaySeconds = seconds < 10 ? '0' + seconds : seconds;
+
+      document.getElementById("countdown").innerHTML = displayMinutes + "分 " + displaySeconds + "秒 ";
+    }
+
+    countdown(); // 初期表示のために一度呼び出す
+    timer = setInterval(countdown, 1000); // 1秒ごとに更新
+    alarmIcon.src = "images/countdown1.png"; // アイコンをオンにする
+  } else {
+    clearInterval(timer);
+    timer = null;
+    alarmIcon.src = "images/countdown2.png"; // アイコンをオフにする
+    document.getElementById("countdown").innerHTML = "";
+  }
+});
+</script>
+<!--question1-->
+<h2>問題1：鳥取市街地にて、例年8月13日～15日にかけて開催される歴史の深いお祭りは何でしょうか？</h2>
+<h3>①鳥取しゃんしゃん祭&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;②宇倍神社例大祭</h3>   
+<h3>③因幡の菖蒲綱引き&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;④江尾十七夜</h3>
+</section>
+<style>
+.example{
+    text-align: center;
+}
+</style>
+<div class="example">
+   <input value="解答を表示する" id="btn-20170519-1" type="button" style="margin-bottom:0;"></input>
+<!-- ボタン -->
+<p></p>
+<!-- 解答 -->
+<div class="example">
+<a href="detail_mondai1.html"><p style="display:none;font-size:1.3em;color:red;" id="ans-20170519-1">①鳥取しゃんしゃん祭</p></a>
+</div>
+<!-- JavaScriptのコード -->
+<script>
+// 画面が読み込まれた後で処理を開始するために、windowオブジェクトの loadイベントに関数を登録します
+window.addEventListener( 'load', ()=>{
+  let button = document.querySelector("#btn-20170519-1");
+  // ボタンの click イベントに関数を登録します
+  // flagという変数を関数に閉じ込めたいので、その場で関数を生成して登録します
+  button.addEventListener('click', (()=>{
+    let flag = true; // 解答を表示している時と非表示の時とを区別するためのフラグ
+    // ボタンの clickイベントに登録する関数を返します
+    return ()=>{
+      // 解答の部分を表示（または非表示）にします
+      document.querySelector("#ans-20170519-1").style.display = flag ? "block" : "none";
+      // ボタンのラベル文字列をセットします
+      button.value = flag ? "解答を隠す" : "解答を表示する";
+      // flag を反転させます
+      flag = !flag;
+    };
+  })());
+});
+</script>
+</main>
+
+</div>
+<!--/#contents-->
+
+
+</div>
+<!--/#container-->
+
+<!--ページの上部へ戻るボタン-->
+<div class="pagetop"><a href="#"><i class="fas fa-angle-double-up"></i></a></div>
+
+<!--開閉ボタン（ハンバーガーアイコン）-->
+<div id="menubar_hdr">
+<span></span><span></span><span></span>
+</div>
+
+<!--jQueryの読み込み-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!--スライドショー（slick）-->
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="js/slick.js"></script>
+
+<!--パララックス（inview）-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/protonet-jquery.inview/1.1.2/jquery.inview.min.js"></script>
+<script src="js/jquery.inview_set.js"></script>
+
+<!--このテンプレート専用のスクリプト-->
+<script src="js/main.js"></script>
+
+</body>
+</html>
