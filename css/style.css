@@ -155,13 +155,6 @@ header {
 
 /*ロゴ*/
 #logo img {display: block;}
-#logo {
-	margin: 0;
-	width: 10vw;		/*幅*/
-	padding-left: 10px;	/*左に空ける余白*/
-	padding-top: 10px;	/*上に空ける余白*/
-}
-
 	/*画面幅700px以上の追加指定*/
 	@media screen and (min-width:700px) {
 
@@ -179,8 +172,45 @@ header {
 	left: 0px;
 	top: 0px;
 }
+/* 回答ボタン*/
+button {
+	background-color: #008CBA;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 16px;
+  }
+  .button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* ボタン間のスペースを均等に配置 */
+    margin-bottom: 30px; /* ボタンコンテナの下にスペース */
+}
+.button {
+    background-color: #04AA6D; /* 緑色 */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 40px;
+    margin: 4px 10px;
+    cursor: pointer;
+    flex: 1 1 40%; /* 各ボタンが40%の幅を持つ */
+    margin-bottom: 30px; /* ボタンの上下にスペース */
+}
 
-
+.button1, .button2, .button3, .button4 {
+    width: auto; /* 各ボタンの幅を自動調整 */
+}
+  /*Lam cai nut next*/
 /*スイングアニメーション（主にロゴ画像に使用）
 ---------------------------------------------------------------------------*/
 .swing {
@@ -385,11 +415,25 @@ main {
 
 /*h2(見出し)要素*/
 main h2 {
-	font-size: 2rem;		/*文字サイズを２倍*/
-	font-weight: normal;	/*太さを標準*/
-	color: var(--primary-color);	/*文字色。css冒頭で指定しているprimary-colorを読み込みます*/
+	font-size: 3rem;		/*文字サイズを２倍*/
+	/*太さを標準*/
+	color: green;	/*文字色。css冒頭で指定しているprimary-colorを読み込みます*/
 	border-bottom: 1px solid var(--primary-color);	/*下線の幅、線種、varの部分は色で、css冒頭で指定しているprimary-colorを読み込みます*/
 	padding-left: 0.5rem;	/*左に0.5文字分の余白*/
+}
+main h3 {
+	font-size: 2rem;		/*文字サイズを２倍*/
+	/*太さを標準*/
+	color:black;	/*文字色。css冒頭で指定しているprimary-colorを読み込みます*/
+	border-bottom: 1px solid var(--primary-color);	/*下線の幅、線種、varの部分は色で、css冒頭で指定しているprimary-colorを読み込みます*/
+	padding-left: 0.5rem;	/*左に0.5文字分の余白*/
+}
+ h1 {
+	font-size: 4rem;		/*文字サイズを２倍*/
+	font-weight: normal;	/*太さを標準*/
+	color: red;	/*文字色。css冒頭で指定しているprimary-colorを読み込みます*/
+	background-color: #EDFFBE;
+	text-align:center;
 }
 
 /*type1の見出し*/
@@ -826,3 +870,36 @@ ul.slick-dots li.slick-active button {
 	.pc {display: block;}
 
 	}/*追加指定ここまで*/
+/*ページングナビゲーション */
+	.pagination {
+		display: flex;
+		justify-content: center;
+		padding: 10px 10px;
+		list-style: none;
+	}
+	.pagination li {
+		margin: 0 5px;
+	}
+	.pagination a {
+		display: block;
+		padding: 0px 8px;
+		text-decoration: none;
+		color: #007bff;
+		border: 1px solid #dee2e6;
+		border-radius: 5px;
+	}
+	.pagination a:hover {
+		background-color: #007bff;
+		color: #fff;
+	}
+	.pagination .active a {
+		background-color: #007bff;
+		color: #fff;
+		border-color: #007bff;
+	}
+	.pagination .disabled a {
+		color: #6c757d;
+		pointer-events: none;
+	}
+
+	

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>メンタープログラム</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="ここにサイト説明を入れます">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="container">
+<header>
+<h1 id="logo"><a href="index.html"><img src="images/tottori_logo.png" alt="tottori_logo" class="swing"></a></h1>
+</header>
+
+<div id="contents">
+
+<!--メインメニュー-->
+<div id="menubar">
+
+<nav>
+<ul>
+<li><a href="home.html">ホーム</a></li>
+<li><a href="sekijum.html">席順</a></li>
+<li><a href="index.html">問題</a></li>
+</ul>
+</nav>
+
+</div>
+<!--/#menubar-->
+
+<main>
+    <section>
+        <button type="button" onclick="history.back()">戻る</button>
+        <h1>広告収入</h1>
+    </section>
+    
+    <section class="list-side-title up">
+        <div class="list-menu">
+            <figure><img src="images/youtube1.jpg" alt=""></figure>
+            <figure><img src="images/youtube2.jpg" alt=""></figure>
+        </div>
+    </section>
+    
+    <section>
+        <div detail_answer>
+            <h3>YouTubeで得る収入の柱は、視聴者が動画を再生する際に表示される広告による広告収入です。</br>
+                視聴者が動画に表示された広告を見ると、広告主からYouTubeに広告料が支払われ、
+                その一部が動画投稿者に還元されます。これが、YouTubeの広告収入の基本的なしくみです。</br>
+                YouTubeで自社製品やサービスをPRしたい広告主は、YouTubeに掲載料を払って広告を出します。広告には、動画の途中でテレビCMのように流れたり、バナー広告のように表示されたりと様々な広告フォーマットがあります。
+                動画投稿者は動画ごとに広告フォーマットを設定することができます。</br>
+               ただし、表示する広告は動画との関連性などからYouTubeが自動的に決定します。そのため、動画投稿者側でどのような内容の広告を表示するかは決められません。
+               これらの一連の流れによって企業から視聴者へ商品やサービスのPRが行われ、動画投稿者には広告料が支払われます。</br>
+               なお、動画投稿者は、主に4つの広告フォーマット1）から動画に貼る広告フォーマットを自由に決められます。</br>
+               この主な4種類1）とは、①広告が5秒間再生されたあとでスキップできる「スキップ可能な動画広告」、
+               ②最後まで広告を見なければならない「スキップ不可の動画広告」、
+               ③最長6秒間のスキップ不可の短い動画が流れる「バンパー広告」、④再生画面の下部が広告枠になる「オーバーレイ広告」です。</br>
+            </h3>
+       </div>
+    </section>
+</main>
+</div>
+<!--/#contents-->
+</div>
+<!--/#container-->
+
+<!--ページの上部へ戻るボタン-->
+<div class="pagetop"><a href="#"><i class="fas fa-angle-double-up"></i></a></div>
+
+<!--開閉ボタン（ハンバーガーアイコン）-->
+<div id="menubar_hdr">
+<span></span><span></span><span></span>
+</div>
+
+<!--jQueryの読み込み-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!--スライドショー（slick）-->
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="js/slick.js"></script>
+
+<!--パララックス（inview）-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/protonet-jquery.inview/1.1.2/jquery.inview.min.js"></script>
+<script src="js/jquery.inview_set.js"></script>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>
