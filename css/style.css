@@ -200,7 +200,7 @@ button {
     text-align: left;
     text-decoration: none;
     display: inline-block;
-    font-size: 40px;
+    font-size: 60px;
     margin: 4px 10px;
     cursor: pointer;
     flex: 1 1 40%; /* 各ボタンが40%の幅を持つ */
