@@ -30,110 +30,13 @@
 <div id="menubar">
 <nav>
 <ul>
-<li><a href="home.html">ホーム</a></li>
-<li><a href="sekijum.html">席順</a></li>
-<li><a href="index.html">問題</a></li>
+  <li><a href="index.html">問題</a></li>
 </ul>
 </nav>
 </div>
 <!--/#menubar-->
 <main>
 <section>
-<!--
-<button id="startButton">アラームを開始する</button>
-<div id="countdown"></div>
-<script>
-var timer = null;
-
-document.getElementById('startButton').addEventListener('click', function() {
-  if (timer === null) {
-    var minutes = 4; // アラームの分数を設定
-    var seconds = 0; // アラームの秒数を設定
-
-    // カウントダウン用の関数
-    function countdown() {
-      if (seconds === 0) {
-        if (minutes === 0) {
-          // 指定された時間が過ぎている場合はアラームを鳴らす
-          alert("アラームです！");
-          clearInterval(timer);
-          timer = null;
-          document.getElementById("startButton").textContent = "アラームを開始する";
-          return;
-        }
-        minutes--;
-        seconds = 59;
-      } else {
-        seconds--;
-      }
-
-      var displayMinutes = minutes < 10 ? '0' + minutes : minutes;
-      var displaySeconds = seconds < 10 ? '0' + seconds : seconds;
-
-      document.getElementById("countdown").innerHTML = displayMinutes + "分 " + displaySeconds + "秒 ";
-    }
-
-    countdown(); // 初期表示のために一度呼び出す
-    timer = setInterval(countdown, 1000); // 1秒ごとに更新
-    this.textContent = "アラームを停止する";
-  } else {
-    clearInterval(timer);
-    timer = null;
-    document.getElementById("countdown").innerHTML = "";
-    this.textContent = "アラームを開始する";
-  }
-});
-</script>  -->
-<!---->
-<!--
-<div id="startButton"> 
-  <img src="images/countdown1.png" id="alarmIcon" alt="アラームオフ">
-</div>
-<div id="countdown"></div>
-<script>
-var timer = null;
-var alarmIcon = document.getElementById("alarmIcon");
-
-document.getElementById('startButton').addEventListener('click', function() {
-  if (timer === null) {
-    var minutes = 4; // アラームの分数を設定
-    var seconds = 0; // アラームの秒数を設定
-
-    // カウントダウン用の関数
-    function countdown() {
-      if (seconds === 0) {
-        if (minutes === 0) {
-          // 指定された時間が過ぎている場合はアラームを鳴らす
-          alert("時間になりました！");
-          clearInterval(timer);
-          timer = null;
-          alarmIcon.src = "images/countdown2.png"; // アイコンをオフにする
-          document.getElementById("countdown").innerHTML = "";
-          return;
-        }
-        minutes--;
-        seconds = 59;
-      } else {
-        seconds--;
-      }
-
-      var displayMinutes = minutes < 10 ? '0' + minutes : minutes;
-      var displaySeconds = seconds < 10 ? '0' + seconds : seconds;
-
-      document.getElementById("countdown").innerHTML = displayMinutes + "分 " + displaySeconds + "秒 ";
-    }
-
-    countdown(); // 初期表示のために一度呼び出す
-    timer = setInterval(countdown, 1000); // 1秒ごとに更新
-    alarmIcon.src = "images/countdown1.png"; // アイコンをオンにする
-  } else {
-    clearInterval(timer);
-    timer = null;
-    alarmIcon.src = "images/countdown2.png"; // アイコンをオフにする
-    document.getElementById("countdown").innerHTML = "";
-  }
-});
-</script>-->
 <!--chinh sua time chay tiep time sau khi bam dung lai-->
 <div id="startButton"> 
   <img src="images/countdown1.png" id="alarmIcon" alt="アラームオフ">
